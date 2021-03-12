@@ -177,25 +177,13 @@ def prompt():
     statement1 = "You suddenly wake up in a on a labatory table.\n"
     printFast(statement1)
     statement2 = "You have no memories and no idea what is happening.\n"
-    for char in statement2:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
+    printFast(statement2)
     statement3 = "You notice a man wearing a white lab coat in the corner of the room shrieking at the site of you, horrified at what he has created.\n"
-    for char in statement3:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
-    statement4 = "As he flees in the next room and slams the door behind him, you notice that besides the door the man fleed in, there is only that and a single window that leads to an unknown fate.\n"
-    for char in statement4:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
+    printFast(statement3)
+    statement4 = "As he flees in the next room and slams the door behind him, you notice that besides the door there is only that and a single window that leads to an unknown fate.\n"
+    printFast(statement4)
     statement5 = ("What would you like to do?\n")
-    for char in statement5:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
+    printFast(statement5)
     print("a. try the enter the door\n")
     print("b. flee out the window\n")
     print("c. do nothing\n")
@@ -215,30 +203,17 @@ def player_move(myAction):
 
     if myAction == 'a':
         statement1 = "You thump over to the door, trying to open it\n"
-        for char in statement1:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.03)
+        printFast(statement1)
         statement2 = "After entering you see the scientist on his bed, trying to sleep away his terriors, only for him to wake up in horror as you loom over his bed with a grotesque smile.\n"
-        for char in statement2:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.03)
+        printFast(statement2)
         statement3 = "The mad scientist panicks and flees his aprtment screaming in horror, leaving only you inside the empty room.\n"
-        for char in statement3:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.03)
-        
+        printFast(statement3)
         statement4 = ("What would you like to do?\n")
-        for char in statement4:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.03)
+        printFast(statement4)
         print("a. flee out the window\n")
         print("b. do nothing\n")
         action = input("> ")
-        accepatble_actions = ['a', 'b', 'c']
+        accepatble_actions = ['a', 'b']
         while action.lower() not in accepatble_actions:
             print("Unknown action, try again.\n")
             action = input("> ") 
@@ -247,21 +222,18 @@ def player_move(myAction):
         elif action == 'a':
             player_move2()
         
-        elif myAction == 'b': 
+        elif action == 'b': 
+            statement1 = "Time passes and you begin to feel very hungary and alone. You flee the aprtment to find refuge."
+            printFast(statement1)
             player_move2()
     
-        elif myAction == 'c':
-            print("Time passes and you begin to feel very hungary and alone. You flee the aprtment to find refuge.")
-            player_move2()
+        
     elif myAction == 'b':
         player_move2()
 
     elif myAction == 'c':
         statement1 = "Time passes and you begin to feel very hungary and alone. You flee the aprtment to find refuge."
-        for char in statement1:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.03)
+        printFast(statement1)
         player_move2()
 
         
@@ -269,28 +241,16 @@ def player_move(myAction):
     
 def player_move2():
     statement1 = "You jump down the window into the cold stormy night.\n"
-    for char in statement1:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
+    printFast(statement1)
     statement2 = "After walking though the forest for a while you come across a small village.\n"
-    for char in statement2:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
+    printFast(statement2)
     statement3 = "All villagers that see you flee in horror on sight but you notice a small hut with a few elderly folk living in it.\n"
-    for char in statement3:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
+    printFast(statement3)
     statement4 = "What would you like to do?\n"
-    for char in statement4:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
+    printFast(statement4)
     print("a. flee the village too look for refuge.\n")
     print("b. steal some of the villagers food and learn more from them.\n")
-    print("c. do nothing\n")
+    print("c. stay where you are and continue to observe the villagers.\n")
     action = input("> ")
     accepatble_actions = ['a', 'b', 'c']
     while action.lower() not in accepatble_actions:
@@ -303,44 +263,70 @@ def player_move2():
 
 def player_move3(myAction):
     if myAction == 'a':
-        statement1 = "You jump down the window into the cold stormy night.\n"
-        for char in statement1:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.03)
-    statement2 = "After walking though the forest for a while you come across a small village.\n"
-    for char in statement2:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
-    statement3 = "All villagers that see you flee in horror on sight but you notice a small hut with a few elderly folk living in it.\n"
-    for char in statement3:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
-    statement4 = "What would you like to do?\n"
-    for char in statement4:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
-    print("a. flee the village too look for refuge.\n")
-    print("b. steal some of the villagers food and learn more from them.\n")
-    print("c. do nothing\n")
-    action = input("> ")
-    accepatble_actions = ['a', 'b', 'c']
-    while action.lower() not in accepatble_actions:
-        print("Unknown action, try again.\n")
-        action = input("> ") 
-    if action.lower() == 'quit':
-        sys.exit()
-    elif action.lower() in accepatble_actions:
-        print("You've reached the end of the demo. Thanks for playing!")
+        statement1 = "You flee the village looking for shelter as you are now starving and cold from the weather.\n"
+        printFast(statement1)
+        statement2 = "You eventaully come across a cave, and deside to take refuge.\n"
+        printFast(statement2)
+        statement3 = "Falling asleep, you wake up the next morning hungary and looking for food.\n"
+        printFast(statement3)
+        statement4 = "What would you like to do?\n"
+        printFast(statement4)
+        print("a. flee the village too look for refuge.\n")
+        print("b. steal some of the villagers food and learn more from them.\n")
+        print("c. do nothing\n")
+        action = input("> ")
+        accepatble_actions = ['a', 'b', 'c']
+        while action.lower() not in accepatble_actions:
+            print("Unknown action, try again.\n")
+            action = input("> ") 
+        if action.lower() == 'quit':
+            sys.exit()
+        elif action.lower() in accepatble_actions:
+            print("You've reached the end of the demo. Thanks for playing!")
+    elif myAction == 'b':
+        statement1 = "You wait for the villagers to leave before sneaking in thier house, looking for food and other useful items.\n"
+        printFast(statement1)
+        statement4 = "What would you like to do?\n"
+        printFast(statement4)
+        print("a. look in the kitchen.\n")
+        print("b. look in one of the bedrooms.\n")
+        print("c. look in the basement.\n")
+        action = input("> ")
+        accepatble_actions = ['a', 'b', 'c']
+        while action.lower() not in accepatble_actions:
+            print("Unknown action, try again.\n")
+            action = input("> ") 
+        if action.lower() == 'quit':
+            sys.exit()
+        elif action.lower() in accepatble_actions:
+            print("You've reached the end of the demo. Thanks for playing!")
+    elif myAction == 'c':
+        statement1 = "As you continue to hide near a tree and easedrop on the villager's conversations, you begin to learn more about them.\n"
+        printFast(statement1)
+        statement2 = "You begin the learn language, how humans live, the concept of emotions and family.\n"
+        printFast(statement2)
+        statement3 = "You begin to question where you came from, and what you are.\n"
+        printFast(statement3)
+        statement4 = "You see the villagers begin to go to bed\n"
+        printFast(statement4)
+        statement5 = "What would you like to do?\n"
+        printFast(statement5)
+        print("a. flee the village to look for refuge.\n")
+        print("b. enter in the house to look for food.\n")
+        action = input("> ")
+        accepatble_actions = ['a', 'b']
+        while action.lower() not in accepatble_actions:
+            print("Unknown action, try again.\n")
+            action = input("> ") 
+        if action.lower() == 'quit':
+            sys.exit()
+        elif action.lower() in accepatble_actions:
+            player_move3(action)
+        
+         
+
     
     
-
-
-
-
     
 def main_game_loop():
     prompt()
@@ -357,10 +343,7 @@ def setup_game():
     ## JOB HANDLE
     question2 = "My dear friend " + player_name + ", which character do you wish to play?\n"
     question2added = "(You can play as a Imogen, Iachimo, Elizabeth Bennet, Mr. Fitzwilliam Darcy, Victor Frankenstein, The Monster, Laura, or Carmilla)\n"
-    for char in question2:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
+    printFast(question2)
     for char in question2added:
         sys.stdout.write(char)
         sys.stdout.flush()
@@ -391,10 +374,7 @@ def setup_game():
 
     ### Intro
     question3 = "Welcome, " + player_name + ". Enjoy playing as " + player_job + ".\n"
-    for char in question3:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
+    printFast(question3)
     
     
     speech1 = "Welcome to this fantasy world!\n"
